@@ -11,6 +11,11 @@ Restaurant.destroy_all
 puts 'Creating Restaurants...'
 
 5.times do
-  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.full_address, rating: rand(1..5))
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.full_address,
+    rating: rand(1..5),
+    chef_name: Faker::Name.name
+  )
 end
 puts 'Seeding Finished'

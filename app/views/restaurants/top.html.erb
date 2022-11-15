@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Top Rated Restaurants</h1>
+    <% @restaurants.each do |restaurant| %>
+      <ul>
+      <%= render restaurant %>
+      <p>
+        <%= link_to 'Show This Restaurant', restaurant %>
+      </p>
+      </ul>
+    <% end %>
+</div>
